@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "reference: compares against the C++ pylevin package (skipped if not installed)",
+    "gpu: requires a CUDA device",
+]
